@@ -22,7 +22,7 @@ form.addEventListener("submit" , getData)
 async function getData(e){
     e.preventDefault()
     try {
-    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=722ad69e0a4e494a8d6111424220812&q=${input.value}&aqi=yes`)
+    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=722ad69e0a4e494a8d6111424220812&q=${input.value}&aqi=yes`)
     const data = await response.json()
     console.log(data)
     let country = data.location.country
@@ -62,7 +62,7 @@ let week = document.querySelector(".week")
 async function forecast(e){
     // e.preventDefault()
 
-    let res = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=c6eaf61fb8eb4eda9de60846220812&q=${input.value}&days=5&aqi=yes&alerts=yes`)
+    let res = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=c6eaf61fb8eb4eda9de60846220812&q=${input.value}&days=5&aqi=yes&alerts=yes`)
     let forecast_data = await res.json()
     let day = forecast_data.forecast.forecastday
     let nextday = day[1].date
