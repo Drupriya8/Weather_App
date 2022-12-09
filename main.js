@@ -70,22 +70,23 @@ async function forecast(e){
     let nextdaytemp = day[1].day.avgtemp_c
     let afternextday = day[2].date
     let afternextdayicon = day[2].day.condition.icon
+    console.log(afternextdayicon)
     let afternextdaytemp = day[2].day.avgtemp_c
-    console.log(day)
+    
 
      week.innerHTML = `   <div class="day">
      <span class="name">${nextday}</span>
-     <i class="full_sun"><img src="https:${nextdayicon}" alt=""></i>
+     <i class="full_sun"><img src="https:${nextdayicon}" alt=""></i><br>
      <span class="temperature">${nextdaytemp}°c</span>
  </div>
  <div class="day">
      <span class="name">${afternextday}</span>
-     <i class="full_sun"><img src="${afternextdayicon}""></i>
+     <i class="full_sun"><img src="${afternextdayicon}""></i><br>
      <span class="temperature">${afternextdaytemp} °c</span>
  </div>
  `
 
-    console.log(forecast_data)
+    // console.log(forecast_data)
 
 
     
