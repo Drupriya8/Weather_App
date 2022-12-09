@@ -81,7 +81,7 @@ async function forecast(e){
  </div>
  <div class="day">
      <span class="name">${afternextday}</span>
-     <i class="full_sun"><img src="${afternextdayicon}""></i><br>
+     <i class="full_sun"><img src="https:${afternextdayicon}""></i><br>
      <span class="temperature">${afternextdaytemp} °c</span>
  </div>
  `
